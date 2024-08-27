@@ -6,9 +6,9 @@ export default defineConfig({
   base: "/PunchGame/",
   plugins: [vue()],
   resolve:{
-    alias:[
-
-    ]
+    alias:{
+     
+    }
 
   },
 })
