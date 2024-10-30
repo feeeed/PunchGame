@@ -1,12 +1,13 @@
 <template>
-    <div>
+    <div class="container">
+        <CardLIst/>
 
-        asd
 
     </div>
 </template>
 
 <script setup lang="ts">
+import CardLIst from '../components/CardLIst.vue';
 
 </script>
 
