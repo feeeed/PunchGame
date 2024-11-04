@@ -1,8 +1,9 @@
 <script setup lang="ts">
 
+
 </script>
 
-<template>
+<template v-slot:default>
   <RouterView/>
 </template>
 

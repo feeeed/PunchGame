@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { useTelegram } from './application/services'
+import { useTelegram } from './application/shared/api'
 import './presentation/styles/index.css'
 import App from './App.vue'
-import Router from './application/router'
+import {router} from './application/router'
 
 
 const {userInfo} = useTelegram();
@@ -14,5 +14,5 @@ const pinia = createPinia()
 const app = createApp(App)
 
 app.use(pinia)
-app.use(Router)
+app.use(router)
 app.mount('#app')
