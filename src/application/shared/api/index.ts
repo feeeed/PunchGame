@@ -1,8 +1,4 @@
-import useTelegram from './useTelegram';
-import { request } from './mainHttp';
+import useTelegram from "./useTelegram";
+import { request } from "./mainHttp";
 
-export{
-    useTelegram,
-    request
-    
-}
+export { useTelegram, request };

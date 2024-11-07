@@ -1,14 +1,18 @@
 <template>
-  <div>
+  <div class="bg-black" >
     <ProfileCard :data = "playerStore.player"/>
+    <GameCardList/>
+
+    
    
   </div>  
 </template>
 
 <script setup lang="ts">
-import { defineComponent, onBeforeMount, onMounted, reactive } from "vue";
+import { onBeforeMount } from "vue";
 import { usePlayerStore } from "@/application/entities/player/model";
-import ProfileCard from "../components/MainProfileCard.vue/ui/ProfileCard.vue";
+import ProfileCard from "../components/main-profile-card/ui/ProfileCard.vue";
+import GameCardList from "../components/game-card/GameCardList.vue";
    const playerStore = usePlayerStore();
    onBeforeMount(()=>{
   playerStore.fetchPlayer(155973459);

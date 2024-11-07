@@ -4,27 +4,23 @@ import { PlayerModel } from "./types";
 import { getPlayerInfo } from "../api";
 
 export const usePlayerStore = defineStore("player", {
-    state: () => {
-        return {
-            player: {} as PlayerModel,
-        }   
+  state: () => {
+    return {
+      player: {} as PlayerModel,
+    };
+  },
+  getters: {
+    getPlayer: ({ player }) => player,
+  },
+  actions: {
+    async fetchPlayer(id: number): Promise<void> {
+      const item = await getPlayerInfo(id);
+      if (item) {
+        this.updateQueryPlayer(item);
+      }
     },
-    getters:{
-        getPlayer:({player}) => player
-
+    updateQueryPlayer(payload: PlayerModel): void {
+      this.player = payload;
     },
-    actions: {
-        async fetchPlayer(id:number): Promise<void> {
-            const item = await getPlayerInfo(id)
-            if(item){
-                this.updateQueryPlayer(item)
-
-            }  
-        },
-        updateQueryPlayer(payload: PlayerModel):void {
-            this.player = payload
-        }
-    }
-    
+  },
 });
-
