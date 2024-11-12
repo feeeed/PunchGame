@@ -1,8 +1,8 @@
 <template>
   <div
-    class="max-w mx-auto bg-zinc-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+    class="max-w mx-auto bg-zinc-900 shadow-md overflow-hidden md:max-w-2xl"
   >
-    <div class="flex bg-black justify-between m-3">
+    <div class="flex bg-black rounded-xl justify-between m-3">
       <div class="flex items-center shrink-0">
         <img
           class="h-20 w-20 object-cover p-3 rounded-2xl"
