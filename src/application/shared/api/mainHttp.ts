@@ -1,6 +1,5 @@
 import axios from "axios";
 
-const API_URL_OPENDOTA = "https://api.opendota.com/api";
 const API_URL_VALVE = "https://api.steampowered.com/IDOTA2Match_570/";
 
 type Methods = "put" | "post" | "delete" | "get" | "head" | "options";
@@ -27,15 +26,26 @@ export const request = async ({
   return response.data;
 };
 
+
 export const valveRequest = async({
   url,
-  config = {},
-  data,
+  method,
+  params,
 }:{
   url:string;
-  config?: any;
-  data?: any;
+  params?: any;
+  method: Methods
 }) => {
-  const response = await axios.get(`${API_URL_VALVE}/${url}/?key=${import.meta.env.VITE_VALVE_KEY}`,config)
+  console.log(params)
+  const response = await axios[method](
+    `${API_URL_VALVE}${url}`,params,
+  {
+    headers:{
+      'content-type': 'application/x-www-form-urlencoded',
+      
+    }
+  })
+    
+  return response.data
   
 }

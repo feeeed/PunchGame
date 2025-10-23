@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@twa-dev/sdk": "^7.8.0",
+    "@types/qs": "^6.9.17",
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
     "axios": "^1.7.7",
     "dota2-minimap-hero-sprites": "^2.4.0",
     "dotenv": "^16.4.5",
     "path": "^0.12.7",
     "pinia": "^2.2.2",
+    "qs": "^6.13.0",
     "vue": "^3.4.37",
     "vue-router": "4"
   },
